@@ -1,0 +1,85 @@
+/* Make sure the body and root container fill the viewport */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background for the full page */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #fef9c3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centering container */
+.container {
+  width: 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 10px;
+  color: #1d4ed8;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  margin: 8px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #1d4ed8;
+  outline: none;
+}
+
+button {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0f3ec4;
+}
+
+/* Success message */
+.success {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #dcfce7;
+  border: 1px solid #16a34a;
+  border-radius: 8px;
+  color: #166534;
+}
