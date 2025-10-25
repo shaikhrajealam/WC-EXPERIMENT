@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIKTC Engineering Registration</title>
+  <link rel="stylesheet" href="EXP04.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>AIKTC Engineering Registration</h2>
+    <form id="regForm" onsubmit="return validateForm()">
+      <input type="text" id="firstName" placeholder="First Name"><br>
+      <input type="text" id="lastName" placeholder="Last Name"><br>
+      <input type="text" id="email" placeholder="Email"><br>
+      <input type="password" id="password" placeholder="Password"><br>
+      <input type="text" id="mobile" placeholder="Mobile Number"><br>
+      <textarea id="address" placeholder="Address"></textarea><br>
+      <button type="submit">Register</button>
+      <p id="errorMsg"></p>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      let firstName = document.getElementById("firstName").value.trim();
+      let lastName = document.getElementById("lastName").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value;
+      let mobile = document.getElementById("mobile").value.trim();
+      let address = document.getElementById("address").value.trim();
+      let error = document.getElementById("errorMsg");
+
+      if (!/^[A-Za-z]{6,}$/.test(firstName)) {
+        error.textContent = "First Name must be alphabets and min 6 chars.";
+        return false;
+      }
+      if (lastName === "") {
+        error.textContent = "Last Name cannot be empty.";
+        return false;
+      }
+      if (!/^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
+        error.textContent = "Enter a valid email.";
+        return false;
+      }
+      if (password.length < 6) {
+        error.textContent = "Password must be at least 6 chars.";
+        return false;
+      }
+      if (!/^\d{10}$/.test(mobile)) {
+        error.textContent = "Mobile number must be 10 digits.";
+        return false;
+      }
+      if (address === "") {
+        error.textContent = "Address cannot be empty.";
+        return false;
+      }
+
+      alert("Registration Successful!");
+      return true;
+    }
+  </script>
+</body>
+</html>
