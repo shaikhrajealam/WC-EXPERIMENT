@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book NOGAV</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background: #f9f7f6; }
+
+    /* Navbar */
+    .navbar { background: #222; }
+    .navbar-brand { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #f9f7f6 !important; }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      background: linear-gradient(135deg, #fdf6e3, #ffe5d4);
+      padding: 5rem 2rem;
+      border-radius: 2rem;
+      align-items: center;
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #ff6f61; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; line-height: 1.6; color: #333; }
+    .hero img { border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15); max-width: 100%; }
+
+    /* Cards */
+    .card { border: none; border-radius: 1rem; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
+    .card-img-top { height: 250px; object-fit: cover; }
+
+    /* Buttons */
+    .btn-primary { background: #ff6f61; border: none; }
+    .btn-primary:hover { background: #ff4c3b; }
+    .btn-outline-primary { color: #ff6f61; border-color: #ff6f61; }
+    .btn-outline-primary:hover { background: #ff6f61; color: #fff; }
+
+    /* Category Cards */
+    .category-card {
+      border: none;
+      border-radius: 1rem;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 2rem 1rem;
+    }
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .category-card h5 {
+      color: #ff6f61;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .category-card p { color: #555; font-size: 0.95rem; }
+
+    /* Contact Form */
+    #contact .card { border-radius: 1rem; padding: 2rem; }
+    #contact label { font-weight: 600; }
+
+    /* Footer */
+    footer { background: #222; color: #fff; text-align: center; padding: 2rem 1rem; border-top: 5px solid #ff6f61; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">Book NOGAV</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#books">Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="container my-5">
+    <div class="hero">
+      <div>
+        <h1>Discover Your Next Favorite Book</h1>
+        <p>From timeless classics to modern programming guides, Book Oasis has a curated collection to inspire every reader.</p>
+        <a href="#books" class="btn btn-primary btn-lg me-2">Explore Books</a>
+        <a href="#contact" class="btn btn-outline-primary btn-lg">Reach Out</a>
+      </div>
+      <div>
+        <img src="RIVER TRAVELLER.png" alt="Book Cover">
+      </div>
+    </div>
+  </header>
+
+  <!-- About + Category Grid -->
+  <section id="about" class="container mb-5 text-center">
+    <h2 class="h4 text-danger mb-3">About Book NOGAV</h2>
+    <p>We provide a modern online bookstore experience with an extensive collection of novels, children's books, biographies, and technical guides. Enjoy a seamless browsing and ordering experience tailored for book lovers.</p>
+
+    <!-- Category Grid -->
+    <div id="categories" class="mt-5">
+      <h2 class="h4 text-danger mb-4">Categories</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="category-card">
+            <h5>Fiction</h5>
+            <p>Immerse yourself in imaginative worlds and captivating stories.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card">
+            <h5>Classics</h5>
+            <p>Rediscover timeless literature from the world’s greatest authors.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card">
+            <h5>Children’s Books</h5>
+            <p>Colorful stories that spark creativity and inspire young minds.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card">
+            <h5>Programming</h5>
+            <p>Master coding with beginner to advanced development guides.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card">
+            <h5>Biographies</h5>
+            <p>Read about inspiring lives that changed the course of history.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card">
+            <h5>Self-Help</h5>
+            <p>Empower your mindset and personal growth through practical wisdom.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books -->
+  <section id="books" class="container mb-5">
+    <h2 class="h4 text-danger mb-3">Featured Books</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- Book 1 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="THE INTELLIGENCE INVESTOR.png" class="card-img-top" alt="THE INTELLIGENCE INVESTOR">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">THE INTELLIGENCE INVESTOR</h5>
+            <p class="card-text mb-1"><small class="text-muted">Benjamin Graham</small></p>
+            <p class="card-text fw-semibold">₹1450</p>
+            <div class="mt-auto">
+              <a href="#buy" class="btn btn-primary w-100">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="THE SECRET MASTER.png" class="card-img-top" alt="THE SECRET MASTER">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">THE SECRET MASTER</h5>
+            <p class="card-text mb-1"><small class="text-muted">Sumana Ramanan</small></p>
+            <p class="card-text fw-semibold">₹1199</p>
+            <div class="mt-auto">
+              <a href="#buy" class="btn btn-primary w-100">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="RIVER TRAVELLER.png" class="card-img-top" alt="RIVER TRAVELLER">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">RIVER TRAVELLER</h5>
+            <p class="card-text mb-1"><small class="text-muted">Sanjoy Hazarika</small></p>
+            <p class="card-text fw-semibold">₹1250</p>
+            <div class="mt-auto">
+              <a href="#buy" class="btn btn-primary w-100">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Buy Section -->
+  <section id="buy" class="container mb-5">
+    <div class="p-4 bg-white rounded shadow-sm">
+      <h2 class="h5 text-danger">Order Your Book</h2>
+      <p>Fill out the contact form with the book title and your details, and we'll handle the rest.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="container mb-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="h5 text-danger mb-3">Get in Touch</h2>
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label">Book Title</label>
+              <input type="text" class="form-control" placeholder="Book you want">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" placeholder="Additional details"></textarea>
+            </div>
+            <div class="col-12 d-flex gap-2">
+              <button type="submit" class="btn btn-primary">Send</button>
+              <button type="reset" class="btn btn-outline-secondary">Clear</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>©️ <span id="yr"></span> Book NOGAV — All rights reserved.</p>
+    <small>Follow us on social media for updates</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
